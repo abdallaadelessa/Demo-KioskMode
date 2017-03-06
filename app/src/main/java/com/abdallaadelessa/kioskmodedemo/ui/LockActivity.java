@@ -40,7 +40,8 @@ public class LockActivity extends AppCompatActivity {
             swLockMode.setChecked(true);
             showContent();
         } else {
-            showMessage(getString(R.string.not_activated));
+            swLockMode.setChecked(true);
+            switchLockMode(true);
         }
         //==========>
         swLockMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -90,7 +91,7 @@ public class LockActivity extends AppCompatActivity {
 
     private void showHint(String message) {
         if (message != null) {
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
         }
     }
 
